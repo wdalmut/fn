@@ -1,4 +1,4 @@
 
-module.exports = (fn) => () => {
-  return fn.apply(fn, arguments.flip().reverse());
+module.exports = (fn) => function() {
+  return fn.apply(fn, Array.from(arguments).slice().reverse());
 }
