@@ -43,4 +43,8 @@ module.exports = {
   unary:         require('./unary'),
   T:             require('./t'),
   F:             require('./f'),
+  cond:          require('./cond'),
+  ifElse:        require('./if-else'),
+  apply:         require('./apply'),
+  flip:          require('./flip'),
 };
