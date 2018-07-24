@@ -1,4 +1,4 @@
 
-module.exports = (a,b) => {
-  return a+b;
+module.exports = (args) => {
+  return args.reduce((m, i) => m+i, 0);
 }
