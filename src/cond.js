@@ -1,5 +1,5 @@
-const curry2 = require('../src/curry2');
-const ifElse = require('../src/if-else');
+const tail = require('./tail');
+const ifElse = require('./if-else');
 
 module.exports = function cond(conds) {
   return (args) => {
@@ -7,7 +7,7 @@ module.exports = function cond(conds) {
       return undefined;
     }
 
-    let condition = conds.slice().shift();
-    return ifElse(condition[0])(condition[1])(cond(conds.slice(1)))(args);
+    let [condition, action] = conds.slice().shift();
+    return ifElse(condition)(action)(cond(tail(conds)))(args);
   };
 };
