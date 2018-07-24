@@ -49,4 +49,5 @@ module.exports = {
   flip:          require('./flip'),
   identity:      require('./identity'),
   always:        require('./always'),
+  tail:          require('./tail'),
 };
