@@ -4,6 +4,7 @@ module.exports = {
   not:           require('./not'),
   complement:    require('./not'),
   eq:            require('./eq'),
+  equals:        require('./eq'),
   or:            require('./or'),
   lt:            require('./lt'),
   lte:           require('./lte'),
@@ -51,4 +52,5 @@ module.exports = {
   always:        require('./always'),
   tail:          require('./tail'),
   modulo:        require('./modulo'),
+  converge:      require('./converge'),
 };
