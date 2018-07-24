@@ -71,14 +71,14 @@ map(increaseValue)(users);
 ### fizzbuzz
 
 ```js
-const {T, flip, pipe, cond, equals, always, modulo, identity} = require('./src');
+const {T, flip, pipe, cond, curry2, equals, always, modulo, identity} = require('./src');
 
 
 cond([
-  [pipe(flip(modulo)(15), equals(0)), always("fizzbuzz")],
-  [pipe(flip(modulo)(3), equals(0)), always("fizz")],
-  [pipe(flip(modulo)(5), equals(0)), always("buzz")],
+  [pipe([curry2(flip(modulo))(15), equals(0)]), always("fizzbuzz")],
+  [pipe([curry2(flip(modulo))(3), equals(0)]), always("fizz")],
+  [pipe([curry2(flip(modulo))(5), equals(0)]), always("buzz")],
   [T, identity],
-])
+])(3)
 ```
 
