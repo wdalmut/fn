@@ -47,4 +47,5 @@ module.exports = {
   ifElse:        require('./if-else'),
   apply:         require('./apply'),
   flip:          require('./flip'),
+  identity:      require('./identity'),
 };
