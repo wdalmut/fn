@@ -68,3 +68,17 @@ map(increaseValue)(users);
   { name: 'Pippo', value: 2 } ]
 ```
 
+### fizzbuzz
+
+```js
+const {T, flip, pipe, cond, equals, always, modulo, identity} = require('./src');
+
+
+cond([
+  [pipe(flip(modulo)(15), equals(0)), always("fizzbuzz")],
+  [pipe(flip(modulo)(3), equals(0)), always("fizz")],
+  [pipe(flip(modulo)(5), equals(0)), always("buzz")],
+  [T, identity],
+])
+```
+
