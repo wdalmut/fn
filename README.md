@@ -15,6 +15,14 @@ map(pipe([log, inc]))([1,2,3]);
 [ 2, 3, 4 ]
 ```
 
+### Average example
+
+```js
+const { length, sum, divide, converge } = require('./src');
+
+converge(divide)([sum, length])([1,2,3]); // 2
+```
+
 ### Sort list of users by name
 
 ```js
