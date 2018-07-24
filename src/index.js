@@ -53,4 +53,5 @@ module.exports = {
   tail:          require('./tail'),
   modulo:        require('./modulo'),
   converge:      require('./converge'),
+  divide:        require('./divide'),
 };
