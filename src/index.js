@@ -50,4 +50,5 @@ module.exports = {
   identity:      require('./identity'),
   always:        require('./always'),
   tail:          require('./tail'),
+  modulo:        require('./modulo'),
 };
