@@ -48,4 +48,5 @@ module.exports = {
   apply:         require('./apply'),
   flip:          require('./flip'),
   identity:      require('./identity'),
+  always:        require('./always'),
 };
