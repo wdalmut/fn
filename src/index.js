@@ -59,4 +59,5 @@ module.exports = {
   reverse:       require('./reverse'),
   append:        require('./append'),
   last:          require('./last'),
+  head:          require('./head'),
 };
