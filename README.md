@@ -93,14 +93,18 @@ cond([
 ### Min Max
 
 ```js
-const {T, flip, converge, concat, or, last, head, append, pipe, cond, curry2, uncurry2, equals, length, sort, reverse, always, slice, identity, subtract} = require('./src');
+const {
+  T, flip, converge, concat, or, last, head, append, pipe,
+  cond, curry2, uncurry2, equals, length, sort, reverse,
+  always, slice, identity, subtract
+} = require('./src');
 
 let numbers = [1,2,3,4,5,6,7,8,9,10]
 
 numbers = pipe([sort(subtract), reverse])(numbers)
 
-const first_element = pipe(head, curry2(flip(uncurry2(append)))([]));
-const last_element = pipe(last, curry2(flip(uncurry2(append)))([]));
+const first_element = pipe([head, curry2(flip(uncurry2(append)))([])]);
+const last_element = pipe([last, curry2(flip(uncurry2(append)))([])]);
 
 function minMax(rem, fin) {
   return cond([
