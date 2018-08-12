@@ -58,4 +58,5 @@ module.exports = {
   slice:         require('./slice'),
   reverse:       require('./reverse'),
   append:        require('./append'),
+  last:          require('./last'),
 };
