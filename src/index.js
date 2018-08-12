@@ -61,4 +61,5 @@ module.exports = {
   last:          require('./last'),
   head:          require('./head'),
   uncurry2:      require('./uncurry2'),
+  concat:        require('./concat'),
 };
