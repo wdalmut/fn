@@ -56,4 +56,5 @@ module.exports = {
   divide:        require('./divide'),
   length:        require('./length'),
   slice:         require('./slice'),
+  reverse:       require('./reverse'),
 };
