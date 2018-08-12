@@ -60,4 +60,5 @@ module.exports = {
   append:        require('./append'),
   last:          require('./last'),
   head:          require('./head'),
+  uncurry2:      require('./uncurry2'),
 };
