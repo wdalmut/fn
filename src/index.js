@@ -55,4 +55,5 @@ module.exports = {
   converge:      require('./converge'),
   divide:        require('./divide'),
   length:        require('./length'),
+  slice:         require('./slice'),
 };
