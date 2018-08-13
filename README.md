@@ -105,7 +105,7 @@ const last_element = pipe([last, curry2(flip(uncurry2(append)))([])]);
 
 const create_min_max_tuple = converge(uncurry2(concat))([first_element, last_element]);
 
-const descending_sort = pipe([sort(subtract), reverse]);
+const descending_sort = sort(flip(subtract));
 
 const without_first_and_last_element = slice(1)(-1);
 
