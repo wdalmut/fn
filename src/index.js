@@ -62,4 +62,5 @@ module.exports = {
   head:          require('./head'),
   uncurry2:      require('./uncurry2'),
   concat:        require('./concat'),
+  aperture:      require('./aperture'),
 };
