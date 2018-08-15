@@ -68,5 +68,6 @@ module.exports = {
   descend:       require('./descend'),
   isNil:         require('./is-nil'),
   groupBy:       require('./group-by'),
-  assocPath:    require('./assoc-path'),
+  assocPath:     require('./assoc-path'),
+  lensPath:      require('./lens-path'),
 };
