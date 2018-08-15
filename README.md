@@ -75,6 +75,25 @@ filterByNameEqualsToWalter(users)
 [ { name: 'walter' } ]
 ```
 
+### Group by age a list of users
+
+```js
+const { groupBy, prop } = require('./src');
+
+let user1 = {name: "walter", age: 35};
+let user2 = {name: "Wally", age: 35};
+let user3 = {name: "Pippo", age: 41};
+let user4 = {name: "Paperino", age: 14};
+let users = [user1, user2, user3, user4];
+
+const groupByAge = groupBy(prop('age'));
+
+groupByAge(users)
+{ '14': [ { name: 'Paperino', age: 14 } ],
+  '35': [ { name: 'walter', age: 35 }, { name: 'Wally', age: 35 } ],
+  '41': [ { name: 'Pippo', age: 41 } ] }
+```
+
 ### Update a property of a list of users
 
 ```js
