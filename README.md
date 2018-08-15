@@ -40,6 +40,24 @@ sortByName(users)
 [ { name: 'Pippo' }, { name: 'Wally' }, { name: 'walter' } ]
 ```
 
+### Sort list of users by age
+
+```js
+const { sort, prop, ascend } = require('./src');
+
+let user1 = {name: "walter", age: 35};
+let user2 = {name: "Wally", age: 21};
+let user3 = {name: "Pippo", age: 41};
+let users = [user1, user2, user3];
+
+const sortByAge = sort(ascend(prop('age')));
+
+sortByAge(users)
+[ { name: 'Wally', age: 21 },
+  { name: 'walter', age: 35 },
+  { name: 'Pippo', age: 41 } ]
+```
+
 ### Filter list of users with a given name
 
 ```js
