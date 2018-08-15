@@ -65,4 +65,5 @@ module.exports = {
   aperture:      require('./aperture'),
   range:         require('./range'),
   ascend:        require('./ascend'),
+  descend:       require('./descend'),
 };
