@@ -64,4 +64,5 @@ module.exports = {
   concat:        require('./concat'),
   aperture:      require('./aperture'),
   range:         require('./range'),
+  ascend:        require('./ascend'),
 };
