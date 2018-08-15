@@ -63,4 +63,5 @@ module.exports = {
   uncurry2:      require('./uncurry2'),
   concat:        require('./concat'),
   aperture:      require('./aperture'),
+  range:         require('./range'),
 };
