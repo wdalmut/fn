@@ -134,6 +134,45 @@ map(increaseValue)(users);
   { name: 'Pippo', value: 2 } ]
 ```
 
+### Update a deeply nested property of a list of users
+
+```js
+const { map, lensPath, inc, over } = require('./src');
+
+let user1 = {name: "walter", profile: {value: 2}};
+let user2 = {name: "Wally", profile: {value: 4}};
+let user3 = {name: "Pippo", profile: {value: 1}};
+let users = [user1, user2, user3];
+
+const xLens = lensPath(['profile', 'value']);
+const increaseValue = over(xLens)(inc);
+
+map(increaseValue)(users);
+[ { name: 'walter', profile: { value: 3 } },
+  { name: 'Wally', profile: { value: 5 } },
+  { name: 'Pippo', profile: { value: 2 } } ]
+```
+
+### Update a deeply nested property of a list of users (2)
+
+```js
+const { map, lensPath, inc, over } = require('./src');
+
+let user1 = {name: "walter", comments: [{name: 'Laura', score: 2}, {name: 'Michele', score: 0}]};
+let user2 = {name: "Wally", comments: [{name: 'Michele', score: 0}]};
+let user3 = {name: "Pippo", comments: [{name: 'Giovanni', score: 8}, {name: 'Michele', score: 3}]};
+let users = [user1, user2, user3];
+
+const xLens = lensPath(['comments', 0, 'score']);
+const increaseValue = over(xLens)(inc);
+
+map(increaseValue)(users);
+[ { name: 'walter', comments: [{name: 'Laura', score: 3}, {name: 'Michele', score: 0}], [Object] ] },
+  { name: 'Wally', comments: [{name: 'Michele', score: 1}] },
+  { name: 'Pippo', comments: [{name: 'Giovanni', score: 9}, {name: 'Michele', score: 3}] } ]
+
+```
+
 ### fizzbuzz
 
 ```js
