@@ -94,6 +94,27 @@ groupByAge(users)
   '41': [ { name: 'Pippo', age: 41 } ] }
 ```
 
+### Group by age a list of users (2)
+
+```js
+const { groupBy, path } = require('./src');
+
+let user1 = {name: "walter", profile: {age: 35}};
+let user2 = {name: "Wally", profile: {age: 35}};
+let user3 = {name: "Pippo", profile: {age: 41}};
+let user4 = {name: "Paperino", profile: {age: 14}};
+let users = [user1, user2, user3, user4];
+
+const groupByAge = groupBy(path(['profile', 'age']));
+
+groupByAge(users)
+{ '14': [ { name: 'Paperino', profile: [Object] } ],
+  '35':
+   [ { name: 'walter', profile: [Object] },
+     { name: 'Wally', profile: [Object] } ],
+  '41': [ { name: 'Pippo', profile: [Object] } ] }
+```
+
 ### Update a property of a list of users
 
 ```js
