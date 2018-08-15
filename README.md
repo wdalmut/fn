@@ -167,7 +167,7 @@ const xLens = lensPath(['comments', 0, 'score']);
 const increaseValue = over(xLens)(inc);
 
 map(increaseValue)(users);
-[ { name: 'walter', comments: [{name: 'Laura', score: 3}, {name: 'Michele', score: 0}], [Object] ] },
+[ { name: 'walter', comments: [{name: 'Laura', score: 3}, {name: 'Michele', score: 0}] },
   { name: 'Wally', comments: [{name: 'Michele', score: 1}] },
   { name: 'Pippo', comments: [{name: 'Giovanni', score: 9}, {name: 'Michele', score: 3}] } ]
 
