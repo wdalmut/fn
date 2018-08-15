@@ -67,4 +67,5 @@ module.exports = {
   ascend:        require('./ascend'),
   descend:       require('./descend'),
   isNil:         require('./is-nil'),
+  groupBy:       require('./group-by'),
 };
