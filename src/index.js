@@ -66,4 +66,5 @@ module.exports = {
   range:         require('./range'),
   ascend:        require('./ascend'),
   descend:       require('./descend'),
+  isNil:         require('./is-nil'),
 };
