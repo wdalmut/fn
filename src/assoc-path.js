@@ -3,6 +3,14 @@ const identity = require('../src/identity');
 
 module.exports = (paths) => (value) => (data) => {
   return (function a(paths, data) {
+    if (Array.isArray(data)) {
+      data = data.slice();
+    }
+
+    if (typeof data == 'object' && !Array.isArray(data)) {
+      data = Object.assign({}, data);
+    }
+
     if (paths.length == 1) {
       data[paths.slice().pop()] = value;
       return data;

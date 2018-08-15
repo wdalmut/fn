@@ -20,4 +20,13 @@ describe("Assoc Path", () => {
     expect(assocPath(['a', 'b', 'c'])(42)({}))
       .toEqual({a: {b: {c: 42}}});
   });
+
+  it("should assoc at path without as immutable thing", () => {
+    const obj = {a: {b: 3}};
+    expect(assocPath(['a', 'b', 'c'])(42)(obj))
+      .toEqual({a: {b: {c: 42}}});
+
+    // immutable
+    expect(obj).toEqual({a: {b: 3}});
+  });
 });
