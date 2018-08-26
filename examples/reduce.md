@@ -2,6 +2,7 @@
 
 ## Flatten multiple Min Max
 
+```js
 const {
   T, flip, converge, concat, or, last, head, append, pipe,
   cond, curry2, uncurry2, equals, length, sort, reverse,
@@ -29,4 +30,4 @@ let numbers = [
 ]
 
 pipe([map(pipe([sort(subtract), reverse])), reduce(minMax)([])])(numbers)
-
+```
